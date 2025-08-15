@@ -1,0 +1,132 @@
+.full-user-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.user-page-wrap {
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.user-nav {
+    background-color: rgb(33 30 30);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.user-button {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-width: 1px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.user-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.user-full-block {
+    display: flex;
+    padding: 20px;
+    padding-bottom: 0px;
+   
+}
+
+.user-info-block {
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 18px;  
+}
+
+.next {
+    margin-top: 20px;
+}
+
+.active-user-bids {
+    padding: 20px;
+}
+
+.user-bid-notifications {
+    padding: 20px;
+}
+
+.notif-info {
+    font-style: italic;
+    margin-left: 10px;
+    line-height: 10%;
+}
+
+.user-bid-info {
+    font-weight: bold;
+    display: flex;
+    margin-top: 5px;
+}
+
+.bid-info-wrap {
+    display: flex;
+    flex: 1;
+}
+
+.bid-info-2 {
+    padding-left: 20px;
+}
+
+.user-info-links {
+    color: black;
+    text-decoration: none;
+}
+
+.user-info-links:hover {
+    transform: translateY(-5px);
+}
+
+.item-discard-button,
+.item-purchase-button {
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.item-purchased {
+    color: rgb(26, 53, 0);
+}
+
+.password-confirm-form {
+    margin-top: 15px;
+}
+.password-confirm-field {
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .user-page-wrap {
+        width: 100%;
+    }
+    .notif-info {
+        line-height: normal;
+    }
+    .user-full-block {
+        display: block;
+    }
+}

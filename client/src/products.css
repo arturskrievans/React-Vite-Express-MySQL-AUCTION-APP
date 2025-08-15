@@ -1,0 +1,121 @@
+.item-page-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.item-page-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, auto));
+    justify-content: space-evenly;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.item-container {
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    caret-color: transparent;
+}
+
+.item-container:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.item-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;  
+    border-radius: 8px;
+}
+
+
+.image-nav-buttons button {
+    margin: 5px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 47%;
+}
+
+.image-nav-buttons button:hover:enabled {
+    background-color: #0056b3;
+}
+
+.image-nav-buttons button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: rgb(137 137 137);
+    text-align: right;
+    padding-top: 5px;
+}
+.item-bid {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+.item-nav-buttons button {
+    margin: 5px;
+    margin-top: 20px;
+    padding: 6px 12px;
+    font-size: 16px;
+    background-color: #3d8b47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+.item-nav-buttons button:hover {
+    background-color: #185920;
+}
+
+
+.single-bid {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .item-page-container {
+        grid-template-columns: repeat(2, minmax(350px, auto));
+    }
+}
+
+@media only screen and (max-width: 800px) { 
+    .item-page-container {
+        grid-template-columns: repeat(1, minmax(350px, auto));
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .item-page-container {
+        display: grid;
+    }
+}

@@ -1,0 +1,241 @@
+.item-parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - 2 * 70px);
+    align-items: flex-start;
+    margin-top: 80px;
+}
+
+
+
+.single-item-container {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    caret-color: transparent;
+    
+}
+
+.single-item-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.date-price-flex-box {
+    display: flex;
+    font-size: 0.9rem;
+    color: rgb(137 137 137);
+    padding-top: 5px;
+}
+
+.single-item-bid {
+    flex: 1;
+    font-weight: bold;
+}
+
+.single-item-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.single-item-description {
+    margin-top: 20px;
+}
+
+.button-update button {
+    background-color: #092952;
+}
+
+.button-update button:hover {
+    background-color: #010c1a;
+}
+
+.button-delete button {
+    background-color: #ff0000;
+    margin-top: 5px;
+}
+
+.button-delete button:hover {
+    background-color: #8f0606;
+}
+
+.bidding-container {
+    width: 250px;
+    margin-left: 5px;
+    padding: 20px;
+    padding-bottom: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.image-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.image-nav:disabled {
+    opacity: 0.3;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.right {
+    right: 0px;
+}
+
+.left {
+    left: 0px;
+}
+
+.modal-image {
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+}
+
+.modal-bid-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 2 * 70px);
+    z-index: 1001;
+}
+
+.modal-bid-wrap {
+    position: relative;
+    width: 400px;
+    font-size: 22px;
+    padding-left: 40px;
+    padding-top: 40px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+}
+
+.modal-bid-wrap 
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-bid-wrap input[type=submit] {
+    background-color: #3d3d3d;
+    color: white;
+    cursor: pointer;
+    width: 75%;
+    padding: 10px 20px;
+}
+
+.modal-bid-wrap input[type=submit]:hover {
+    background-color: #000000;
+}
+
+.modal-bid-wrap .close-form {
+    position: absolute;
+    top: -55px;
+    right: -10px;
+    cursor: pointer;
+}
+
+.modal-bid-wrap .error-message {
+    text-align: left;
+}
+
+.remove-bid {
+    padding-left: 10px;
+    color: #eb1b1b;
+    cursor: pointer;
+}
+
+.bid button {
+    background-color: #850000;
+}
+
+.bid button:hover {
+    background-color: #590505;
+}
+
+.item-nav-buttons button:disabled {
+    cursor: not-allowed;
+}
+
+.submit-bid-container {
+    padding-top: 20px;
+}
+
+.submit-bid-container input {
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.bidding-error-message {
+    text-align: left;
+    color: red;
+    font-size: 16x;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .item-parent-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: calc(100vh - 2 * 70px);
+        margin-top: 80px;
+    }
+    .bidding-container {
+        width: 300px;
+        margin-left: 0;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .modal-bid-wrap {
+        width: 300px;
+    }
+    .modal-bid-wrap input {
+        width: 70%;
+    }
+    .error-message {
+        width: 80%;
+    }
+}
+

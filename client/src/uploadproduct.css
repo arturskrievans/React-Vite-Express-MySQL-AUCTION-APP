@@ -1,0 +1,92 @@
+.sell-item-block {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.sell-item-wrap {
+    width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 10px;
+    /*grid-template-columns: repeat(5, minmax(200px, auto));*/
+}
+
+.product-container {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.remove-image {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(20, 14, 14);
+}
+
+.file-limit {
+    color: rgb(235, 45, 45);
+    display: inline;
+}
+
+.sell-item-block input[type=text],
+.sell-item-block input[type=password],
+.sell-item-block input[type=email],
+.sell-item-block input[type=number],
+.sell-item-block input[type=submit] {
+    padding: 8px 16px;
+    margin: 8px 0;
+    font-size: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.product-description {
+    height: 150px;
+    width: 350px;
+}
+
+
+.select-file-btn {
+    cursor: pointer;
+}
+.list-item-btn {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 950px) {
+    .sell-item-wrap {
+        width: 100%;
+    }
+    .sell-item-block {
+        padding: 20px;
+    }
+    .product-description {
+        width: 280px;
+    }
+}
