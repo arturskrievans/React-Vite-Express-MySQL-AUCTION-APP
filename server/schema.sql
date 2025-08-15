@@ -4,9 +4,6 @@ DROP TABLE IF EXISTS bids;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS users;
 
-/*cd C:\Users\artur\Desktop\VSprogramming\React + Express\web-auction\server
-mysql -u root -p auction_app < schema.sql
-*/
 
 CREATE TABLE Users (
     id int NOT NULL AUTO_INCREMENT,
