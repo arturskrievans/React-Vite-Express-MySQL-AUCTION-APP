@@ -41,7 +41,17 @@ Once a succesfull connection is established, run "CREATE DATABASE auction_app;" 
 4. Bidding notifications appear in real-time in user profiles. Whoever accepts the win first buys the item. <br>
 5. Additional functionality like global chat is also available. <br>
 <h2>UI</h2> 
-<img width="1920" height="954" alt="image" src="https://github.com/user-attachments/assets/6ad376ff-7cec-4bb6-a4a0-a020d711ddb9" />
+
+<img width="1920" height="954" alt="image"  src="https://github.com/user-attachments/assets/6ad376ff-7cec-4bb6-a4a0-a020d711ddb9" />
+
+<img width="1917" height="948" alt="image"  src="https://github.com/user-attachments/assets/c380b36d-bfb4-4c21-99ce-34eb44f0764b" />
+
+<img width="1920" height="1011" alt="image"  src="https://github.com/user-attachments/assets/6ef840c9-d3c7-4585-9d78-57eb6c4bf86a" />
+
+<img width="1920" height="946" alt="image" src="https://github.com/user-attachments/assets/42eb2602-2661-4216-8554-f47210b3406b" />
+
+
+
 
 
 
