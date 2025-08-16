@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import socket from './socket.jsx'
 
 const LoginContext = createContext();
 
@@ -28,6 +29,29 @@ export const LoginProvider = ({ children }) => {
         }
         getUser();
     }, [])
+
+    useEffect(()=> {
+
+        if (!user) return;
+        
+        const handleBalanceUpdate = (updated_balance) => {
+            console.log(updated_balance);
+            setUser(prev=> (
+                {
+                    ...prev,
+                    balance: updated_balance
+                }
+            ))
+        }
+
+        socket.on(`receive_user/${user.id}/balance_update`, handleBalanceUpdate);
+
+        return () => {
+          socket.off(`receive_user/${user.id}/balance_update`, handleBalanceUpdate);
+        }
+
+
+    }, [user])
 
     useEffect( ()=> {
         const res = openLogin ? "true" : "false";

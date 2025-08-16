@@ -260,13 +260,49 @@ export async function sellItem(user_id, item_id) {
         WHERE id = ? 
     `, [item_id])
     
+
     await pool.query(`
         DELETE FROM bids
         WHERE user_id <> ? and item_id = ?
     `, [user_id, item_id])
+
+    await pool.query(`
+        UPDATE users
+        JOIN bids on bids.user_id = users.id
+        SET users.balance = users.balance - bids.bid
+        WHERE users.id = ? AND bids.item_id = ?
+    `, [user_id, item_id])
+    
+    await pool.query(`
+        UPDATE users
+        JOIN items on users.id = items.user_id
+        SET users.balance = users.balance + (
+            SELECT bid
+            FROM bids
+            WHERE user_id = ? AND item_id = ?
+        )
+        WHERE items.id = ?
+    `, [user_id, item_id, item_id])
+
+    const [buyer_rows] = await pool.query(`
+        SELECT balance
+        FROM users
+        WHERE id = ?
+    `, [user_id])
+    
+    const [seller_rows] = await pool.query(`
+        SELECT users.id, users.balance 
+        FROM users
+        JOIN items ON items.user_id = users.id
+        WHERE items.id = ?
+    `, [item_id]);
+
+    return {
+        buyer_balance: buyer_rows[0]?.balance,
+        seller_id: seller_rows[0]?.id,
+        seller_balance: seller_rows[0]?.balance 
+    }
 }
-
-
 
 export async function removeBid(user_id, item_id) {
     await pool.query(`

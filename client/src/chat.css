@@ -62,6 +62,7 @@
     color: rgb(137 137 137);
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
 .chat-form {

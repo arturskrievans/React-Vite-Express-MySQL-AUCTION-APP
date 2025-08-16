@@ -103,9 +103,14 @@ io.on("connection", async (socket) => {
     })
 
     socket.on("send_itemSold", async (user_id, item_id) => {
-        await sellItem(user_id, item_id);
+
+        const {buyer_balance, seller_id, seller_balance} = await sellItem(user_id, item_id);
 
         io.to(`item/${item_id}`).emit("receive_itemSold", user_id, item_id);
+
+        io.emit(`receive_user/${user_id}/balance_update`, buyer_balance);
+        io.emit(`receive_user/${seller_id}/balance_update`, seller_balance);
+
         io.emit(`receive_item/${item_id}/sold`, user_id, item_id);
         io.emit('receive_itemSold_public', item_id);
     })

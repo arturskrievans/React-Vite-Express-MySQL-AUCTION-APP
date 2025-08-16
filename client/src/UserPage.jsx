@@ -134,7 +134,10 @@ function UserPage() {
 
 
     useEffect( ()=> {
+
+        if (!user) return;
         getBids();
+        
     }, [user])
 
 
@@ -241,7 +244,10 @@ function UserPage() {
                                         </div>    : 
                                         <>
                                             <button className='item-discard-button' onClick={()=>handleDiscard(val.user_id, val.item_id)}>Discard</button>
-                                            <button className='item-purchase-button' onClick={()=>handlePurchase(val.user_id, val.item_id)}>Purchase</button>
+                                            <button 
+                                            className='item-purchase-button' 
+                                            disabled={user && parseFloat(user.balance) < parseFloat(val.bid)}
+                                            onClick={()=>handlePurchase(val.user_id, val.item_id)}>Purchase</button>
                                         </>}
                                     </div>
                                 </div>
