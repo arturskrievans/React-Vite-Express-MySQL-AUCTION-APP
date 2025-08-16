@@ -17,9 +17,9 @@ Once a succesfull connection is established, run "CREATE DATABASE auction_app;" 
 <b>Backend:</b> Express Js + MySQL <br><br>
   <ul>
     <div>
-      1) The following table schema is created to support website's logic: <br><br>
+      1) The following table schema was created to support the website's logic: <br><br>
       <img width="620" height="698" alt="auction_model" src="https://github.com/user-attachments/assets/38142a6e-6a83-4ba0-b69f-32ddcf45c1f2" /> <br>
-      All tables are connected by foreign key relationships allowing different table entries to be linked and depend on each other making querying, saving and deleting data an easier process. <br>
+      All tables are connected by foreign key relationships allowing different table entries to be linked and dependant on each other making querying, saving and deleting data a much easier process. <br>
       Sensitive data like passwords are hashed using bcrypt library. <br><br>
     </div>
     <div>
